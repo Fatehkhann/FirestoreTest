@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		F70FD0A52639D6BA00371E34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70FD0A42639D6BA00371E34 /* Preview Assets.xcassets */; };
 		F70FD0B02639D6BA00371E34 /* CityRunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FD0AF2639D6BA00371E34 /* CityRunnerTests.swift */; };
 		F70FD0BB2639D6BA00371E34 /* CityRunnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FD0BA2639D6BA00371E34 /* CityRunnerUITests.swift */; };
+		F70FD0CD263A0D7900371E34 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F70FD0CC263A0D7900371E34 /* FirebaseFirestore */; };
+		F70FD0CF263A0D7900371E34 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = F70FD0CE263A0D7900371E34 /* FirebaseFirestoreSwift-Beta */; };
+		F70FD0D4263A141C00371E34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70FD0D3263A141C00371E34 /* GoogleService-Info.plist */; };
+		F70FD0DC263A148C00371E34 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FD0DB263A148C00371E34 /* FirebaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,8 @@
 		F70FD0B62639D6BA00371E34 /* CityRunnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityRunnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70FD0BA2639D6BA00371E34 /* CityRunnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRunnerUITests.swift; sourceTree = "<group>"; };
 		F70FD0BC2639D6BA00371E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F70FD0D3263A141C00371E34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F70FD0DB263A148C00371E34 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70FD0CD263A0D7900371E34 /* FirebaseFirestore in Frameworks */,
+				F70FD0CF263A0D7900371E34 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,9 +105,11 @@
 			children = (
 				F70FD09D2639D6B900371E34 /* CityRunnerApp.swift */,
 				F70FD09F2639D6B900371E34 /* ContentView.swift */,
+				F70FD0D3263A141C00371E34 /* GoogleService-Info.plist */,
 				F70FD0A12639D6BA00371E34 /* Assets.xcassets */,
 				F70FD0A62639D6BA00371E34 /* Info.plist */,
 				F70FD0A32639D6BA00371E34 /* Preview Content */,
+				F70FD0DB263A148C00371E34 /* FirebaseService.swift */,
 			);
 			path = CityRunner;
 			sourceTree = "<group>";
@@ -146,6 +156,10 @@
 			dependencies = (
 			);
 			name = CityRunner;
+			packageProductDependencies = (
+				F70FD0CC263A0D7900371E34 /* FirebaseFirestore */,
+				F70FD0CE263A0D7900371E34 /* FirebaseFirestoreSwift-Beta */,
+			);
 			productName = CityRunner;
 			productReference = F70FD09A2639D6B900371E34 /* CityRunner.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +231,9 @@
 				Base,
 			);
 			mainGroup = F70FD0912639D6B900371E34;
+			packageReferences = (
+				F70FD0CB263A0D7900371E34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F70FD09B2639D6B900371E34 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70FD0D4263A141C00371E34 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F70FD0A02639D6B900371E34 /* ContentView.swift in Sources */,
+				F70FD0DC263A148C00371E34 /* FirebaseService.swift in Sources */,
 				F70FD09E2639D6B900371E34 /* CityRunnerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +599,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F70FD0CB263A0D7900371E34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F70FD0CC263A0D7900371E34 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F70FD0CB263A0D7900371E34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		F70FD0CE263A0D7900371E34 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F70FD0CB263A0D7900371E34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F70FD0922639D6B900371E34 /* Project object */;
 }
