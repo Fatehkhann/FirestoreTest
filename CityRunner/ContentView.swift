@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    let fbService = FirebaseService()
+    @ObservedObject var fbService = FirebaseService()
     @State var cityName = ""
     var body: some View {
         VStack {
@@ -19,6 +19,12 @@ struct ContentView: View {
                     fbService.addCity(city: self.cityName)
                 }) {
                     Text("Push to Firestore")
+                }
+            }
+            VStack {
+                
+                ForEach(self.fbService.cities, id: \.self) { name in
+                    Text(name)
                 }
             }
         }

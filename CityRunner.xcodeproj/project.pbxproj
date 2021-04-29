@@ -17,6 +17,7 @@
 		F70FD0CF263A0D7900371E34 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = F70FD0CE263A0D7900371E34 /* FirebaseFirestoreSwift-Beta */; };
 		F70FD0D4263A141C00371E34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70FD0D3263A141C00371E34 /* GoogleService-Info.plist */; };
 		F70FD0DC263A148C00371E34 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FD0DB263A148C00371E34 /* FirebaseService.swift */; };
+		F70FD0E6263A18EF00371E34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70FD0D3263A141C00371E34 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +253,7 @@
 			files = (
 				F70FD0A52639D6BA00371E34 /* Preview Assets.xcassets in Resources */,
 				F70FD0A22639D6BA00371E34 /* Assets.xcassets in Resources */,
+				F70FD0E6263A18EF00371E34 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
