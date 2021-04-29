@@ -29,8 +29,6 @@ class FirebaseService: ObservableObject {
 //            }
 //        })
         
-//        d
-        
         firestoreDB.collection("cities")
             .addSnapshotListener { documentSnapshot, error in
               guard let fbDocument = documentSnapshot else {
